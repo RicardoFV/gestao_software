@@ -1,5 +1,20 @@
 <?php
 class Tratamento
 {
+    private $id;
+    private $situacao;
+    private $id_sistema;
+    private $id_usuario;
+    private $dt_entrega;
+    private $dt_inclusao;
+    private $dt_alteracao;
+
+    public function __set($atributo, $valor){
+        $this-> $atributo = $valor;
+    }
+
+    public function __get($valor){
+        return $this-> $valor;
+    }
 }
 
