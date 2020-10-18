@@ -4,7 +4,6 @@ class Requisito
     private $id;
     private $nome;
     private $descricao;
-    private $atividade;
     private $tipo_requisito;
     private $id_usuario;
     private $dt_inclusao;

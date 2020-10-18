@@ -51,10 +51,10 @@
                     <p class="erros" id="erro_login"></p>
 
                     <span id="link-telaprincipal">
-                                    <a href="#" id="link_esqueceu_senha" class="btn btn-custom badge-primary mb-2">Esqueceu a Senha</a>
+                            <a href="#" id="link_esqueceu_senha" class="btn btn-custom badge-primary mb-2">Esqueceu a Senha</a>
                                     
-                                    <a href="#" id="link-cadastre-se" class="btn btn-custom badge-primary mb-2 ml-1">Cadastre-se</a>
-                                </span>
+                            <a href="#" id="link-cadastre-se" class="btn btn-custom badge-primary mb-2 ml-1">Cadastre-se</a>
+                    </span>
 
                     <button type="submit" id="acessar_sistema" class="btn btn-custom btn-success btn-lg btn-block mt-2">Acessar</button>
                 </form>

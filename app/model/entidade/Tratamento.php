@@ -2,7 +2,7 @@
 class Tratamento
 {
     private $id;
-    private $situacao;
+    private $nome;
     private $id_sistema;
     private $id_usuario;
     private $dt_entrega;
