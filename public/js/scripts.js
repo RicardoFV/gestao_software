@@ -1,13 +1,6 @@
 // criando o arquivo java script , jquery
 $(document).ready(() => {
 
-    // clique no botão cadastre-se 
-    $('body').on('click', '#link-cadastre-se', () => {
-        $.post('public/views/cadastros/usuario.php', data => {
-            $('#conteudo_principal').html(data)
-        })
-    })
-
     // clique no botão cadastro de sistema
     $('body').on('click', '#tela_sistema', () => {
         $.post('public/views/cadastros/sistema.php', data => {
@@ -51,6 +44,11 @@ $(document).ready(() => {
         })
     })
 
-
+    // clique no botão sair 
+    $('body').on('click', '#botao_sair', () => {
+        $.post('index.php', (data) => {
+            $('body').html(data)
+        })
+    })
 
 })

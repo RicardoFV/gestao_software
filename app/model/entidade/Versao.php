@@ -1,4 +1,7 @@
 <?php
+
+namespace app\model\entidade;
+
 class Versao
 {
     private $id;

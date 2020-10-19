@@ -1,3 +1,8 @@
+<?php
+    include_once '../principal/menu.php'
+
+?>
+
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4 text-center">Usuário</h1>

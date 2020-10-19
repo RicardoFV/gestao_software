@@ -1,4 +1,7 @@
 <?php
+
+namespace app\model\entidade;
+
 class Tratamento
 {
     private $id;
