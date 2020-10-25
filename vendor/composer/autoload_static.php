@@ -21,11 +21,18 @@ class ComposerStaticInit58e60b6b9bde6a4e148784cd565e5629
     );
 
     public static $classMap = array (
+        'app\\model\\entidade\\Autenticar' => __DIR__ . '/../..' . '/app/model/entidade/Autenticar.php',
         'app\\model\\entidade\\Requisito' => __DIR__ . '/../..' . '/app/model/entidade/Requisito.php',
         'app\\model\\entidade\\Sistema' => __DIR__ . '/../..' . '/app/model/entidade/Sistema.php',
         'app\\model\\entidade\\Tratamento' => __DIR__ . '/../..' . '/app/model/entidade/Tratamento.php',
         'app\\model\\entidade\\Usuario' => __DIR__ . '/../..' . '/app/model/entidade/Usuario.php',
         'app\\model\\entidade\\Versao' => __DIR__ . '/../..' . '/app/model/entidade/Versao.php',
+        'app\\model\\persistencia\\PersistenciaAutenticar' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaAutenticar.php',
+        'app\\model\\persistencia\\PersistenciaRequisito' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaRequisito.php',
+        'app\\model\\persistencia\\PersistenciaSistema' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaSistema.php',
+        'app\\model\\persistencia\\PersistenciaTratamento' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaTratamento.php',
+        'app\\model\\persistencia\\PersistenciaUsuario' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaUsuario.php',
+        'app\\model\\persistencia\\PersistenciaVersao' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaVersao.php',
         'app\\util\\Conexao' => __DIR__ . '/../..' . '/app/util/Conexao.php',
     );
 

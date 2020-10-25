@@ -6,10 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'app\\model\\entidade\\Autenticar' => $baseDir . '/app/model/entidade/Autenticar.php',
     'app\\model\\entidade\\Requisito' => $baseDir . '/app/model/entidade/Requisito.php',
     'app\\model\\entidade\\Sistema' => $baseDir . '/app/model/entidade/Sistema.php',
     'app\\model\\entidade\\Tratamento' => $baseDir . '/app/model/entidade/Tratamento.php',
     'app\\model\\entidade\\Usuario' => $baseDir . '/app/model/entidade/Usuario.php',
     'app\\model\\entidade\\Versao' => $baseDir . '/app/model/entidade/Versao.php',
+    'app\\model\\persistencia\\PersistenciaAutenticar' => $baseDir . '/app/model/persistencia/PersistenciaAutenticar.php',
+    'app\\model\\persistencia\\PersistenciaRequisito' => $baseDir . '/app/model/persistencia/PersistenciaRequisito.php',
+    'app\\model\\persistencia\\PersistenciaSistema' => $baseDir . '/app/model/persistencia/PersistenciaSistema.php',
+    'app\\model\\persistencia\\PersistenciaTratamento' => $baseDir . '/app/model/persistencia/PersistenciaTratamento.php',
+    'app\\model\\persistencia\\PersistenciaUsuario' => $baseDir . '/app/model/persistencia/PersistenciaUsuario.php',
+    'app\\model\\persistencia\\PersistenciaVersao' => $baseDir . '/app/model/persistencia/PersistenciaVersao.php',
     'app\\util\\Conexao' => $baseDir . '/app/util/Conexao.php',
 );
