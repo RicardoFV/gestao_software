@@ -51,4 +51,21 @@ $(document).ready(() => {
         })
     })
 
+    // botão para cadastrar usuario 
+    $('body').on('click', '#btn_cadastrar_usuario', () => {
+        // requisição 
+        $.ajax({
+            type: 'post',
+            url: '',
+            dataType: '',
+            data: {},
+            success: function() {
+
+            },
+            error: function() {
+
+            }
+        })
+    })
+
 })

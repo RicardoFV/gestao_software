@@ -19,6 +19,6 @@ $persitencia = new PersistenciaUsuario($conexao, $usuario);
 // trabalha as açoes 
 
 if($acao == 'cadastrar'){
-
+    echo "chegou";
 }
  
