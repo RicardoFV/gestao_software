@@ -19,11 +19,11 @@
         </div>
         <div class="form-group col-md-4">
             <label for="nome">E-mail</label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Seu E-mal">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Seu E-mail">
         </div>
         <div class="form-group col-md-3">
-            <label for="nome">Perfil</label>
-            <select name="" id="" class="form-control">
+            <label for="perfil">Perfil</label>
+            <select name="perfil" id="" class="form-control">
                 <option value="">Administrador</option>
                 <option value="">Usuário</option>
             </select>
@@ -48,7 +48,7 @@
     </div>
 
     <div class="row justify-content-end">
-            <button type="submit" id="btn_cadastrar_usuario" disabled class="btn btn-custom btn-success mr-2 mt-2">Cadastrar</button>
+            <button type="submit" id="btn_cadastrar_usuario" class="btn btn-custom btn-success mr-2 mt-2">Cadastrar</button>
             <button type="submit" id="btn_cancelar_usuario" class="btn btn-custom btn-success mt-2">Cancelar</button>
     </div>
 
