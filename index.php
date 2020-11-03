@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="public/css/estilo.css">
     <!-- scripts -->
     <script src="public/js/scripts.js"></script>
+    <script src="public/js/usuario.js"></script>
 </head>
 <body>
 <div id="conteudo_principal">

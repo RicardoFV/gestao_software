@@ -23,15 +23,15 @@
         </div>
         <div class="form-group col-md-3">
             <label for="perfil">Perfil</label>
-            <select name="perfil" id="" class="form-control">
-                <option value="">Administrador</option>
-                <option value="">Usuário</option>
+            <select name="perfil" id="perfil" class="form-control">
+                <option value="adm">Administrador</option>
+                <option value="user">Usuário</option>
             </select>
         </div>
         <div class="form-group col-md-1">
             <label for="situacao">Situação</label><br>
-            <input class="form-check-input ml-1 mt-2" type="checkbox" value="" id="situacao">
-            <label class="form-check-label ml-4 mt-1" for="situacao">
+            <input class="form-check-input ml-1 mt-2" type="checkbox" value="Sim" id="situacao">
+            <label class="form-check-label ml-4 mt-1" for="situacao" value="Nao">
             Ativado
             </label>
         </div>

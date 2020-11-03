@@ -2,6 +2,7 @@
 
 namespace app\model\persistencia;
 use app\util\Conexao;
+use app\util\ConexaoMySql;
 use app\model\entidade\Usuario;
 class PersistenciaUsuario
 {
@@ -9,7 +10,7 @@ class PersistenciaUsuario
     private $conexao;
     private $usuario;
 
-    public function __construct(Conexao $conexao, Usuario $usuario)
+    public function __construct(ConexaoMySql $conexao, Usuario $usuario)
     {
         $this->conexao = $conexao->conectar();
         $this->usuario = $usuario;
