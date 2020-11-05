@@ -3,6 +3,7 @@ $(document).ready(() => {
 
     // url base do sistema 
     let url_base_casa = 'http://localhost/projetos/gestao_software/projeto/app/controller'
+    let url_base_trabalho = 'http://localhost/projetos/gestao_software/app/controller'
         // botao que especifica a acao
     let acao = ''
 
@@ -31,7 +32,7 @@ $(document).ready(() => {
             // requisição 
         $.ajax({
             type: 'post',
-            url: url_base_casa + '/ControllerUsuario.php',
+            url: url_base_trabalho + '/ControllerUsuario.php',
             dataType: 'json',
             data: formulario,
             success: dados => {
