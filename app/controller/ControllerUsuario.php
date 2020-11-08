@@ -20,6 +20,15 @@ $persitencia = new PersistenciaUsuario($conexao, $usuario);
 // trabalha as açoes 
 
 if($acao == 'cadastrar'){
-    print_r($_POST);
+
+    $usuario->__set('nome', $_POST['nome']);
+    $usuario->__set('email', $_POST['email']);
+    $usuario->__set('perfil', $_POST['perfil']);
+    $usuario->__set('situacao', $_POST['situacao']);
+    $usuario->setSenha($_POST['senha']);
+
+    if($persitencia->cadastrar()){
+        echo 'Salvo';
+    }
 }
  

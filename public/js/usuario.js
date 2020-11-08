@@ -17,22 +17,24 @@ $(document).ready(() => {
         let situacao = $('#situacao').is(':checked');
         let senha = $('#senha').val()
         let repetir_senha = $('#repetir_senha').val()
-
-        let formulario = {
-            acao: acao,
-            nome: nome,
-            email: email,
-            perfil: perfil,
-            situacao: situacao,
-            senha: senha,
-            repetir_senha: repetir_senha
+        let formulario = {}
+            // valida os campos antes de inserir
+        if (validarCampos(nome, email, senha, repetir_senha) == true) {
+            formulario = {
+                acao: acao,
+                nome: nome,
+                email: email,
+                perfil: perfil,
+                situacao: situacao,
+                senha: senha
+            }
         }
 
         console.log(formulario)
             // requisição 
         $.ajax({
             type: 'post',
-            url: url_base_trabalho + '/ControllerUsuario.php',
+            url: url_base_casa + '/ControllerUsuario.php',
             dataType: 'json',
             data: formulario,
             success: dados => {
@@ -44,6 +46,28 @@ $(document).ready(() => {
         })
     })
 
-
-
 })
+
+
+
+// valida os campos 
+function validarCampos(nome, email, senha, repetir_senha) {
+    let valido = true
+    if (nome == '') {
+        alert('Campo Nome , precisa ser preenchido')
+        valido = false
+    }
+
+    if (email == '') {
+        alert('Campo E-mail , precisa ser preenchido')
+        valido = false
+    }
+
+    if (senha != repetir_senha || repetir_senha != senha) {
+        alert('Senhas são diferentes')
+        valido = false
+    }
+
+    return valido
+
+}

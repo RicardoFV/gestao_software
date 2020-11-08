@@ -18,7 +18,7 @@ class PersistenciaUsuario
 
     public function cadastrar()
     {
-        $query = "insert into usuarios(nome, email, senha, perfil_acesso, dt_inclusao, dt_alteracao) values(?,?,?,?,sysdate,sysdate)";
+        $query = "insert into usuarios(nome, email, senha, perfil_acesso, dt_inclusao, dt_alteracao) values(?,?,?,?,now(),now())";
         $stmt = $this->conexao->prepare($query);
         $stmt->bindValue(1,$this->usuario->__get('nome'));
         $stmt->bindValue(2,$this->usuario->__get('email'));
