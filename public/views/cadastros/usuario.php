@@ -11,6 +11,10 @@
 
 <div class="container">
 
+    <div class="alert alert-success" role="alert">
+           <p id="mensagem"></p>
+    </div>
+
     <form method="post" id="form_cadastro_usuario">
     <div class="form-row">
         <div class="form-group col-md-4">

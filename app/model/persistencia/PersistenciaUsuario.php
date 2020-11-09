@@ -18,19 +18,20 @@ class PersistenciaUsuario
 
     public function cadastrar()
     {
-        $query = "insert into usuarios(nome, email, senha, perfil_acesso, dt_inclusao, dt_alteracao) values(?,?,?,?,now(),now())";
+        $query = "insert into usuarios(nome, email, senha, perfil_acesso,situacao, dt_inclusao, dt_alteracao) values(?,?,?,?,?,now(),now())";
         $stmt = $this->conexao->prepare($query);
         $stmt->bindValue(1,$this->usuario->__get('nome'));
         $stmt->bindValue(2,$this->usuario->__get('email'));
         $stmt->bindValue(3,$this->usuario->getSenha());
         $stmt->bindValue(4,$this->usuario->__get('perfil_acesso'));
+        $stmt->bindValue(5,$this->usuario->__get('situacao'));
         // retorna o valor
         return $stmt->execute();
     }
 
     public function atualizar()
     {
-        $query = "update usuarios set nome= ?, email=?, senha =?, perfil_acesso = ?, dt_alteracao = sysdate where id = ?";
+        $query = "update usuarios set nome= ?, email=?, senha =?, perfil_acesso = ?, dt_alteracao = now() where id = ?";
         $stmt = $this->conexao->prepare($query);
         $stmt->bindValue(1,$this->usuario->__get('nome'));
         $stmt->bindValue(2,$this->usuario->__get('email'));

@@ -29,9 +29,7 @@ $(document).ready(() => {
                 senha: senha
             }
         }
-
-        console.log(formulario)
-            // requisição 
+        // requisição 
         $.ajax({
             type: 'post',
             url: url_base_casa + '/ControllerUsuario.php',
@@ -39,6 +37,8 @@ $(document).ready(() => {
             data: formulario,
             success: dados => {
                 console.log(dados)
+                $('#mensagem').html('Cadastro Realizado com Sucesso!')
+
             },
             error: dados => {
                 console.log(dados)
@@ -47,8 +47,6 @@ $(document).ready(() => {
     })
 
 })
-
-
 
 // valida os campos 
 function validarCampos(nome, email, senha, repetir_senha) {
