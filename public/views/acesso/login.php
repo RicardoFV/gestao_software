@@ -1,6 +1,5 @@
 <?php
-$acao = 'cadastrar'; 
-$nome ='';
+$acao = 'login';
 $email ='';
 $senha ='';
 
@@ -21,15 +20,16 @@ $senha ='';
 
             <div class="col-6 container">
                 <!-- iniicio formulario -->
-                <form method="post" id="form_acesso" action="../../../controller/ControllerUsuario.php">
+                <form method="post" id="form_acesso" action="../projeto/app/controller/ControllerAutenticar.php">
                     <!--inicio formulario -->
+                    <input type="hidden" value="<?=$acao?>" id="acao" name="acao">
                     <div class="form-group">
                         <label for="email">E-mail:</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Digite seu email">
+                        <input type="email" value="<?= $email ?>" name="email" class="form-control" id="email" placeholder="Digite seu email">
                     </div>
                     <div class="form-group">
                         <label for="senha">Senha:</label>
-                        <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
+                        <input type="password" value="<?= $senha ?>" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
                     </div>
                     <p class="erros" id="erro_login"></p>
 
