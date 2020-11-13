@@ -1,5 +1,14 @@
 <?php
-    include_once '../principal/menu.php'
+    include_once '../principal/menu.php';
+
+    // criando os campos
+    $acao = 'cadastrar';
+    $nome = '';
+    $email = '';
+    $perfil = '';
+    $situacao = $_POST['situacao'];
+    $senha = '';
+    $repetir_senha = '';
 
 ?>
 
@@ -15,19 +24,20 @@
            <p id="mensagem"></p>
     </div>
 
-    <form method="post" id="form_cadastro_usuario">
+    <form method="post" id="form_cadastro_usuario" action="../projeto/app/controller/ControllerUsuario.php">
     <div class="form-row">
+        <input type="hidden" value="<?= $acao?>" id="acao" name="acao">
         <div class="form-group col-md-4">
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome">
+            <input type="text" value="<?= $nome ?>" name="nome" id="nome" class="form-control" placeholder="Seu nome">
         </div>
         <div class="form-group col-md-4">
             <label for="nome">E-mail</label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Seu E-mail">
+            <input type="email" name="email" value="<?= $email ?>" id="email" class="form-control" placeholder="Seu E-mail">
         </div>
         <div class="form-group col-md-3">
             <label for="perfil">Perfil</label>
-            <select name="perfil" id="perfil" class="form-control">
+            <select name="perfil" id="perfil" class="form-control" value="<?= $perfil ?>">
                 <option value="adm">Administrador</option>
                 <option value="user">Usuário</option>
             </select>
@@ -35,18 +45,18 @@
         <div class="form-group col-md-1">
             <label for="situacao">Situação</label><br>
             <input class="form-check-input ml-1 mt-2" type="checkbox" value="Sim" id="situacao">
-            <label class="form-check-label ml-4 mt-1" for="situacao" value="Nao">
+            <label class="form-check-label ml-4 mt-1" for="situacao"    value="Nao">
             Ativado
             </label>
         </div>
         <div class="form-group col-md-4">
             <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" class="form-control" placeholder="Sua senha">
+            <input type="password" value="<?= $senha ?>" name="senha" id="senha" class="form-control" placeholder="Sua senha">
         </div>
 
         <div class="form-group col-md-4">
             <label for="repetir_senha">Repetir senha</label>
-            <input type="password" name="repetir_senha" id="repetir_senha" class="form-control" placeholder="Repita a sua senha">
+            <input type="password" value="<?= $repetir_senha ?>" name="repetir_senha" id="repetir_senha" class="form-control" placeholder="Repita a sua senha">
         </div>  
     
     </div>

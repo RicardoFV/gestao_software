@@ -18,5 +18,4 @@ $persitencia = new PersistenciaAutenticar($conexao, $autenticar);
 
 if($acao == 'login'){
     print_r($_POST);
-    dd();
 }
