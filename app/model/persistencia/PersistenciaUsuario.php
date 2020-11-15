@@ -63,6 +63,19 @@ class PersistenciaUsuario
 
     }
 
+    public function consultarUsuario()
+    {
+        $query = "select * from usuarios where email = ? and senha = ?";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bindValue(1, $this->usuario->__get('email'));
+        $stmt->bindValue(2, $this->usuario->getSenha());
+        
+        $stmt->execute();
+
+        return $stmt->fetch(\PDO::FETCH_OBJ);
+
+    }
+
     public function listar()
     {
         $query = "select * from usuarios";
