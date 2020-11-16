@@ -1,12 +1,11 @@
 <?php
-    include_once '../principal/menu.php';
-
+    
     // criando os campos
     $acao = 'cadastrar';
     $nome = '';
     $email = '';
     $perfil = '';
-    $situacao = $_POST['situacao'];
+    $situacao = '';
     $senha = '';
     $repetir_senha = '';
 
@@ -19,10 +18,6 @@
 </div>
 
 <div class="container">
-
-    <div class="alert alert-success" role="alert">
-           <p id="mensagem"></p>
-    </div>
 
     <form method="post" id="form_cadastro_usuario" action="../projeto/app/controller/ControllerUsuario.php">
     <div class="form-row">
@@ -42,12 +37,12 @@
                 <option value="user">Usuário</option>
             </select>
         </div>
-        <div class="form-group col-md-1">
-            <label for="situacao">Situação</label><br>
-            <input class="form-check-input ml-1 mt-2" type="checkbox" value="Sim" id="situacao">
-            <label class="form-check-label ml-4 mt-1" for="situacao"    value="Nao">
-            Ativado
-            </label>
+        <div class="form-group col-md-3">
+            <label for="situacao">Situação</label>
+            <select name="situacao" id="situacao" class="form-control" value="<?= $situacao ?>">
+                <option value="ativado">Ativado</option>
+                <option value="desativado">Desativado</option>
+            </select>
         </div>
         <div class="form-group col-md-4">
             <label for="senha">Senha</label>

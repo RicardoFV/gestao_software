@@ -6,7 +6,9 @@
 <?php 
     $page ='';
     if(isset($_GET['page']) ){
-        $page = 'page';
+        $page = $_GET['page'];
+        // coloca o menu nas telas , menus na de logim
+        include_once './public/views/principal/menu.php';
     }else{
         include_once './public/views/acesso/login.php';
     }
@@ -28,9 +30,17 @@
             include_once './public/views/cadastros/requisitos.php';
         break;
 
-    }
-?>
+        case 'tela_inicial':
+            include_once './public/views/principal/home.php';
+        break;
 
+        default:
+            include_once './public/views/acesso/login.php';
+        break;
+    }   
+?>
+<body>
+<div id="conteudo"> <!-- conteudo -->
 
 
 <?php 

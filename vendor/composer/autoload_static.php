@@ -34,6 +34,7 @@ class ComposerStaticInit58e60b6b9bde6a4e148784cd565e5629
         'app\\model\\persistencia\\PersistenciaUsuario' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaUsuario.php',
         'app\\model\\persistencia\\PersistenciaVersao' => __DIR__ . '/../..' . '/app/model/persistencia/PersistenciaVersao.php',
         'app\\util\\Conexao' => __DIR__ . '/../..' . '/app/util/Conexao.php',
+        'app\\util\\ConexaoMySql' => __DIR__ . '/../..' . '/app/util/ConexaoMySql.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

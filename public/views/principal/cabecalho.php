@@ -18,4 +18,3 @@
     <!-- css -->
     <link rel="stylesheet" href="public/css/estilo.css">
 </head>
-</html>

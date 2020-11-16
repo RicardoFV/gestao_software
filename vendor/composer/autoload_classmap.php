@@ -19,4 +19,5 @@ return array(
     'app\\model\\persistencia\\PersistenciaUsuario' => $baseDir . '/app/model/persistencia/PersistenciaUsuario.php',
     'app\\model\\persistencia\\PersistenciaVersao' => $baseDir . '/app/model/persistencia/PersistenciaVersao.php',
     'app\\util\\Conexao' => $baseDir . '/app/util/Conexao.php',
+    'app\\util\\ConexaoMySql' => $baseDir . '/app/util/ConexaoMySql.php',
 );

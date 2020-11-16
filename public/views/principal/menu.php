@@ -9,17 +9,17 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" id="pagina_inicial" href="#">Pagina Inicial</a>
+                    <a class="nav-link" id="pagina_inicial" href="?page=tela_inicial">Pagina Inicial</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cadastros
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" id="tela_usuario" href="#">Usuário</a>
-                        <a class="dropdown-item" id="tela_sistema" href="#">Sistema</a>
-                        <a class="dropdown-item" id="tela_requisito" href="#">Requisito</a>
-                        <a class="dropdown-item" id="tela_tratamento" href="#">Tratamento</a>       
+                        <a class="dropdown-item" id="tela_usuario" href="?page=cadastro_usuario">Usuário</a>
+                        <a class="dropdown-item" id="tela_sistema" href="?page=cadastro_sistema">Sistema</a>
+                        <a class="dropdown-item" id="tela_requisito" href="?page=cadastro_requisitos">Requisito</a>
+                        <a class="dropdown-item" id="tela_tratamento" href="?page=cadastro_tratamento">Tratamento</a>       
                     </div>
                 </li>
             </ul>

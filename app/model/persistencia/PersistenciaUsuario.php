@@ -65,7 +65,7 @@ class PersistenciaUsuario
 
     public function consultarUsuario()
     {
-        $query = "select * from usuarios where email = ? and senha = ?";
+        $query = "select id, nome, email from usuarios where email = ? and senha = ?";
         $stmt = $this->conexao->prepare($query);
         $stmt->bindValue(1, $this->usuario->__get('email'));
         $stmt->bindValue(2, $this->usuario->getSenha());
