@@ -29,24 +29,26 @@ if($acao == 'login'){
         // passa as informações para a classe autenticar
         $autenticar->__set('id_usuario', $user->id);
         $autenticar->__set('sessao', 1);
-        // inicia a sessao
-        iniciarSessao();
+        // iniciar a sessao
+        session_start();
         // recebe os dados de acesso
         $acesso = $persitencia->consultar();
+
         // verifica se tem id_usuario e se a sessao e 1
         if(isset($acesso->id_usuario) && $acesso->sessao == 1){
             // passa os dados para a sessao
-            $_SESSION['id_autenticar'] = $acesso = $acesso->id;
-            $_SESSION['id_usuario'] = $acesso = $acesso->id_ususario;
-            
+            $_SESSION['id_autenticar'] = $acesso->id;
+            $_SESSION['id_usuario_existente'] = $acesso->id_usuario;
+                        
             $autenticar->__set('id', $acesso->id);
             $persitencia->atualizarLogin();
             header('location:../../?page=tela_inicial');
+                    
         }else{
             // coloca os dados para persistir na autenticacao
             if($persitencia->login()){ 
                 // passa o id_usuario para a sessao
-                $_SESSION['id_usuario'] = $acesso = $user->id;
+                $_SESSION['id_usuario_novo'] = $acesso = $user->id;
                 header('location:../../?page=tela_inicial');
             }
         }
@@ -55,16 +57,6 @@ if($acao == 'login'){
 
     }
 }else if($acao == 'sair'){
-
-}
-
-
-function iniciarSessao(){
-    if(session_status() !== PHP_SESSION_ACTIVE){
-        session_start();
-    }
-}
-
-function destriirSessao(){
-    session_destroy();
+    $autenticar->__set('sessao', 0);
+    $persitencia->logof();
 }

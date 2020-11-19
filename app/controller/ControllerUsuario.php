@@ -21,16 +21,19 @@ $persitencia = new PersistenciaUsuario($conexao, $usuario);
 
 if($acao == 'cadastrar'){
 
-    print_r($_POST);
+    $senha = $_POST['senha'];
+    $repetir_senha = $_POST['repetir_senha'];
 
-    exit();
-
-    $usuario->__set('nome', $_POST['nome']);
-    $usuario->__set('email', $_POST['email']);
-    $usuario->__set('perfil_acesso', $_POST['perfil']);
-    $usuario->__set('situacao', $_POST['situacao']);
-    $usuario->setSenha($_POST['senha']);
-
+    if($senha === $repetir_senha){
+        $usuario->__set('nome', $_POST['nome']);
+        $usuario->__set('email', $_POST['email']);
+        $usuario->__set('perfil_acesso', $_POST['perfil']);
+        $usuario->__set('situacao', $_POST['situacao']);
+        $usuario->setSenha($senha);
+    }else{
+        echo 'Senhas não conferem';
+    }
+   
     if($persitencia->cadastrar()){
         return 'Cadastro Realizado Com Sucesso!';
     }

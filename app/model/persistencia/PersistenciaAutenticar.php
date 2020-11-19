@@ -26,7 +26,7 @@ class PersistenciaAutenticar
     }
 
     public function atualizarLogin(){
-        $query = 'uddate autenticar set dt_login = now() where id = ?';
+        $query = 'update autenticar set dt_login = now() where id = ?';
         $stmt = $this->conexao->prepare($query);
         $stmt->bindValue(1, $this->autenticar->__get('id'));
         $stmt->execute();
@@ -35,6 +35,12 @@ class PersistenciaAutenticar
 
     public function logof()
     {
+        $query = 'update autenticar set dt_logof = now() , sessao =? where id = ?';
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bindValue(1, $this->autenticar->__get('sessao'));
+        $stmt->bindValue(2, $this->autenticar->__get('id'));
+        $stmt->execute();
+        return $stmt->fetch(\PDO::FETCH_OBJ);
 
     }
 
